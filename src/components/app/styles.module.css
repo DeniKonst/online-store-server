@@ -1,0 +1,63 @@
+
+.app {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.call,
+.name,
+.currency {
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 90px;
+}
+
+.header {
+  background-color: rgb(228, 237, 240);
+  justify-content: space-between;
+}
+
+.nav {
+  background-color: darkcyan;
+  justify-content: space-around;
+  font-style: italic;
+  color: azure;
+  
+}
+
+.header,
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+
+.content {
+  height: calc(100% - 100px);
+}
+
+.home,
+.shop,
+.story,
+.resipec,
+.news,
+.contact {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+.toBuy {
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.shop {
+  color: black;
+}

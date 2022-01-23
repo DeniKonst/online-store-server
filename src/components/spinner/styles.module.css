@@ -1,0 +1,6 @@
+.spin {
+  display: flex;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+}
