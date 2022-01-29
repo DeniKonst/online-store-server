@@ -61,3 +61,9 @@
 .shop {
   color: black;
 }
+
+.routes {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
