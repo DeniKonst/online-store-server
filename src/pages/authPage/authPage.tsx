@@ -11,7 +11,8 @@ export const AuthPage = () => {
 
   const loginHandler = async (values: { email: string; password: string }) => {
     try {
-      const data: any = await request("/api/auth/login", "POST", values);
+      const {data}: any = await request("/api/auth/login", "POST", values);
+      console.log('data: ', data)
       auth.login(data.token, data.userId);
     } catch (e) {}
   };

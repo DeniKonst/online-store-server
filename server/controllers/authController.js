@@ -20,7 +20,8 @@ module.exports.login = async (req, res) => {
             }, keys.JWT_KEY, {expiresIn: 60*60});
 
             res.status(200).json({
-                token: `Bearer ${token}`
+                token: `Bearer ${token}`,
+                userId: candidate._id,
             });
         } else {
             // passwords did not match
