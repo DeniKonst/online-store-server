@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1432017-a4b4-4dc7-8373-24bc7218bd25" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/server/controllers/authController.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/authController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/auth.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth.hook.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/authPage/authPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/authPage/authPage.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="b1432017-a4b4-4dc7-8373-24bc7218bd25" name="Default Changelist" comment="fixed login user" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,8 +54,16 @@
       <workItem from="1642953226266" duration="354000" />
       <workItem from="1642953883510" duration="2048000" />
       <workItem from="1643539211522" duration="80000" />
-      <workItem from="1643539293103" duration="2534000" />
+      <workItem from="1643539293103" duration="2861000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed login user">
+      <created>1643542913174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643542913174</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,5 +80,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed login user" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed login user" />
   </component>
 </project>
