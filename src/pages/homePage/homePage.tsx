@@ -1,15 +1,14 @@
 import { Button } from "antd";
 import React from "react";
 import Spiner from "../../components/spinner/spiner";
-import styles from "./home.styles.module.css";
+import styles from "./styles.module.css";
 import { Spin } from "antd";
 import { useState } from "react";
 
-const Home = () => {
+const HomePage = () => {
   const [isLoading, setIsloading] = useState(false);
   const hendleStartSpiner = () => {
-    if (isLoading===isLoading) 
-    return setIsloading(true);
+    if (isLoading === isLoading) return setIsloading(true);
   };
 
   const hendleStopSpiner = () => {
@@ -23,10 +22,10 @@ const Home = () => {
         <Button onClick={hendleStopSpiner}> stop </Button>
       </div>
       <div className={styles.loading}>
-      <Spiner isLoading={isLoading} />
+        <Spiner isLoading={isLoading} />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;

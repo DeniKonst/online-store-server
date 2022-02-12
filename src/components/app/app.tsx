@@ -6,14 +6,42 @@ import { useRoutes } from "../../routes";
 import styles from "./styles.module.css";
 import { useAuth } from "../../hooks/auth.hook";
 import { AuthContext } from "../../context/authContext";
+import { NavLinkShow } from "../navLinkShow/navLinkShow";
+import { Button } from "antd";
+import { useState } from "react";
+import { useEffect } from "react";
+import { login, loginSuccess, logAutSuccess } from "../../redux/auth/actions";
+import { useDispatch, useSelector } from "react-redux";
+import { storageName } from "../../redux/auth/constants";
+import { ILoginResponse } from "../../redux/auth/types";
+import { selectIsAuthetificated } from "../../redux/auth/selector";
 
 const App = () => {
-  const { login, logaut, token, userId } = useAuth();
-  const isAuthetificated = !!token;
+  const dispatch = useDispatch();
+
+  const isAuthetificated = useSelector(selectIsAuthetificated);
+
+  useEffect(() => {
+    const userData = localStorage.getItem(storageName);
+    if (userData) {
+      const data: ILoginResponse | undefined = JSON.parse(userData);
+
+      if (data?.token) {
+        dispatch(loginSuccess(data));
+      }
+    }
+  }, []);
+
+  const handleLogAut = () => {
+    dispatch(logAutSuccess());
+  };
+
   const routes = useRoutes(isAuthetificated);
+  console.log(isAuthetificated);
 
   const activeRouteStyle = { color: "teal" };
   console.log("DEVELOPMENT_API_URL: ", process.env);
+  // console.log("isAuthetificated: ", isAuthetificated);
 
   return (
     <div className={styles.app}>
@@ -27,32 +55,17 @@ const App = () => {
           <span> currency </span>
         </div>
       </header>
-      <nav className={styles.nav}>
-        <div className={styles.home}>
-          <NavLink to="/">Home</NavLink>
-        </div>
-        <div className={styles.shop}>
-          <NavLink to="/shop">Shop</NavLink>
-        </div>
-        <div className={styles.story}></div>
-        <div className={styles.resipec}>
-          <NavLink to="/resipec">Resipec</NavLink>
-        </div>
-        <div className={styles.news}>
-          <NavLink to="/news">News</NavLink>
-        </div>
-        <div className={styles.login}>
-          <NavLink to="/login">Login</NavLink>
-        </div>
-        <div className={styles.login}>
-          <NavLink to="/registration">Registration</NavLink>
-        </div>
-      </nav>
-      <AuthContext.Provider
+
+      <NavLinkShow
+        isAuthetificated={isAuthetificated}
+        isLogaut={handleLogAut}
+      />
+
+      {/* <AuthContext.Provider
         value={{ login, logaut, token, userId, isAuthetificated }}
-      >
-        <div className={styles.routes}>{routes}</div>
-      </AuthContext.Provider>
+      > */}
+      <div className={styles.routes}>{routes}</div>
+      {/* </AuthContext.Provider> */}
     </div>
   );
 };

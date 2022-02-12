@@ -1,12 +1,12 @@
 import { combineReducers } from "redux";
-import { IAuthState } from "./auth/reducer";
+import { authReducer, IAuthState } from "./auth/reducer";
 import { dilogReduser, IDilogsState } from "./shareDilog/reducer";
 
 export interface State {
   dilogReduser: IDilogsState,
-  // authReducer: IAuthState
+  authReducer: IAuthState
 }
 
-const rootReducer = combineReducers<State>({dilogReduser});
+const rootReducer = combineReducers<State>({dilogReduser, authReducer});
 
 export default rootReducer;

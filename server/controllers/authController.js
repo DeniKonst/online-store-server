@@ -22,6 +22,7 @@ module.exports.login = async (req, res) => {
             res.status(200).json({
                 token: `Bearer ${token}`,
                 userId: candidate._id,
+                login: candidate.login,
             });
         } else {
             // passwords did not match
@@ -37,17 +38,28 @@ module.exports.login = async (req, res) => {
 };
 
 module.exports.register = async (req, res) => {
-    const candidate = await User.findOne({email: req.body.email});
+    const candidateByEmail = await User.findOne({email: req.body.email});
 
-    if (candidate) {
+    const candidateByLogin = await User.findOne({login: req.body.login});
+
+    if (candidateByEmail && candidateByLogin) {
+        res.status(409).json({
+            message: 'This email and login is already taken'
+        })
+    } else if (candidateByEmail) {
         res.status(409).json({
             message: 'This email is already taken'
+        })
+    } else if (candidateByLogin) {
+        res.status(409).json({
+            message: 'This login is already taken'
         })
     } else {
         const salt = bcrypt.genSaltSync(10);
         const password = req.body.password;
         const user = new User({
             email: req.body.email,
+            login: req.body.login,
             password: bcrypt.hashSync(password, salt)
         });
 

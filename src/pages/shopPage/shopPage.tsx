@@ -6,7 +6,7 @@ import Velo from "./velo/velo";
 
 const { TabPane } = Tabs;
 
-const Shop = () => (
+const ShopPage = () => (
   <Tabs defaultActiveKey="1" centered>
     <TabPane tab="Auto" key="1">
       <Auto />
@@ -19,4 +19,4 @@ const Shop = () => (
     </TabPane>
   </Tabs>
 );
-export default Shop;
+export default ShopPage;

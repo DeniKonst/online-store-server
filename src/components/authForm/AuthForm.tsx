@@ -1,5 +1,5 @@
 import { Button, Form, Input } from "antd";
-import Reakt from "react";
+import React from "react";
 
 interface AuthFormProps {
   isRegistration: boolean;
@@ -24,7 +24,7 @@ export const AuthForm = ({ isRegistration, handleSubmit }: AuthFormProps) => {
         autoComplete="off"
       >
         <Form.Item
-          label="Username"
+          label="Email"
           name="email"
           rules={[
             {
@@ -35,6 +35,18 @@ export const AuthForm = ({ isRegistration, handleSubmit }: AuthFormProps) => {
         >
           <Input />
         </Form.Item>
+        {isRegistration && <Form.Item
+          label="Login"
+          name="login"
+          rules={[
+            {
+              required: true,
+              message: "Please input your username!",
+            },
+          ]}
+        >
+          <Input />
+        </Form.Item>}
 
         <Form.Item
           label="Password"

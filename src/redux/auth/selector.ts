@@ -1,1 +1,5 @@
-export const variable = 'dsdsd';
+// export const variable = 'dsdsd';
+
+import { State } from "../reducers";
+
+export const selectIsAuthetificated = (state: State) => state.authReducer.isAuthetificated;
