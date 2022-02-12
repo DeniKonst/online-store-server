@@ -10,7 +10,7 @@ import { NavLinkShow } from "../navLinkShow/navLinkShow";
 import { Button } from "antd";
 import { useState } from "react";
 import { useEffect } from "react";
-import { login, loginSuccess, logAutSuccess } from "../../redux/auth/actions";
+import { login, loginSuccess, logout } from "../../redux/auth/actions";
 import { useDispatch, useSelector } from "react-redux";
 import { storageName } from "../../redux/auth/constants";
 import { ILoginResponse } from "../../redux/auth/types";
@@ -33,7 +33,7 @@ const App = () => {
   }, []);
 
   const handleLogAut = () => {
-    dispatch(logAutSuccess());
+    dispatch(logout());
   };
 
   const routes = useRoutes(isAuthetificated);

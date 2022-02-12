@@ -53,7 +53,7 @@ export const authReducer = createReducer<IAuthState, AuthActions>(initialState)
       isLoading: false,
     };
   })
-  .handleAction(authActions.logAutSuccess, (state) => {
+  .handleAction(authActions.logout, (state) => {
     return {
       ...state,
       isAuthetificated: false,

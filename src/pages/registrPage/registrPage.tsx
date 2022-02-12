@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -25,14 +26,15 @@ const RegistrPage = () => {
 
   const dispatch = useDispatch();
 
+  const navigate = useNavigate();
+
   const registrHandler = (values: any) => {
-    console.log('values: ', values);
-    
-    
-      dispatch(registr(values))}
+    console.log("values: ", values);
 
+    dispatch(registr(values, navigate));
+  };
 
-  return <AuthForm isRegistration={true} handleSubmit={registrHandler} />
+  return <AuthForm isRegistration={true} handleSubmit={registrHandler} />;
 };
 
 export default RegistrPage;
