@@ -1,25 +1,22 @@
-import React from "react";
-import { DollarCircleOutlined } from "@ant-design/icons";
-import { NavLink, Routes } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { useRoutes } from "../../routes";
-import styles from "./styles.module.css";
-import { useAuth } from "../../hooks/auth.hook";
-import { AuthContext } from "../../context/authContext";
-import { NavLinkShow } from "../navLinkShow/navLinkShow";
-import { Button } from "antd";
-import { useState } from "react";
-import { useEffect } from "react";
-import { login, loginSuccess, logout } from "../../redux/auth/actions";
-import { useDispatch, useSelector } from "react-redux";
+import { loginSuccess, logout } from "../../redux/auth/actions";
 import { storageName } from "../../redux/auth/constants";
 import { ILoginResponse } from "../../redux/auth/types";
-import { selectIsAuthetificated } from "../../redux/auth/selector";
+import {
+  selectIsAuthetificated,
+  selectUserLogin,
+} from "../../redux/auth/selector";
+import { Header } from "../Header/Header";
+import styles from "./styles.module.css";
 
 const App = () => {
   const dispatch = useDispatch();
 
   const isAuthetificated = useSelector(selectIsAuthetificated);
+  const userLogin = useSelector(selectUserLogin);
 
   useEffect(() => {
     const userData = localStorage.getItem(storageName);
@@ -32,7 +29,7 @@ const App = () => {
     }
   }, []);
 
-  const handleLogAut = () => {
+  const handleLogout = () => {
     dispatch(logout());
   };
 
@@ -45,20 +42,10 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <header className={styles.header}>
-        <div className={styles.call}>
-          <DollarCircleOutlined />
-        </div>
-        <div className={styles.name}>name</div>
-        <div className={styles.currency}>
-          <DollarCircleOutlined />
-          <span> currency </span>
-        </div>
-      </header>
-
-      <NavLinkShow
+      <Header
         isAuthetificated={isAuthetificated}
-        isLogaut={handleLogAut}
+        logout={handleLogout}
+        userLogin={userLogin}
       />
 
       {/* <AuthContext.Provider

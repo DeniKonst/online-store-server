@@ -1,4 +1,14 @@
+.authUser {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.userAvatar {
+  padding: 0 10px;
+}
+
 .icon {
-  display: block;
-  
+  color: aliceblue;
 }

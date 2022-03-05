@@ -7,6 +7,7 @@ const analyticsRoutes = require("./routes/analytics");
 const categoryRoutes = require("./routes/category");
 const orderRoutes = require("./routes/order");
 const positionRoutes = require("./routes/position");
+const uploadsRoutes = require("./routes/uploads");
 const keys = require("./config/keys");
 const app = express();
 
@@ -19,6 +20,7 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
+app.use("/uoloads", express.static("uploads"));
 app.use(passport.initialize());
 require("./middleware/passport")(passport);
 
@@ -33,5 +35,6 @@ app.use("/api/analytics", analyticsRoutes);
 app.use("/api/category", categoryRoutes);
 app.use("/api/order", orderRoutes);
 app.use("/api/position", positionRoutes);
+app.use("/api/uploads", uploadsRoutes);
 
 module.exports = app;

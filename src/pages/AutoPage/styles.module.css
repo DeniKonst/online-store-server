@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  /* position: absolute; */
+  flex-wrap: wrap;
+  height: auto;
+  padding: 15px;
+  width: 100%;
+  background-color: rgb(240, 247, 245);
+}
+
+.pageName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

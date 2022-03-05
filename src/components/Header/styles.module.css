@@ -1,29 +1,49 @@
+.header {
+  background-color: rgb(135, 204, 204);
+  padding: 0 10px;
+  height: 60px;
+ 
+}
 .nav {
-  background-color: darkcyan;
-  justify-content: space-around;
+  justify-content: space-between;
   font-style: italic;
-  color: azure;
+  font-size: 18px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 50px;
+  height: 100%;
+}
+
+.startPage {
+  justify-content: end;
+  padding-right: 30px;
+}
+
+.nav a {
+  display: flex;
+  align-items: center;
+  color: azure;
+}
+
+.orders {
+  display: flex;
+  height: 100%
 }
 
 .home,
 .shop,
 .story,
-.resipec,
-.news,
-.contact {
+.about,
+.news {
   display: block;
   width: 100px;
   text-align: center;
+  color: aliceblue;
 }
 
-.toBuy {
-  padding: 10px;
-  display: block;
-  text-align: center;
+.user {
+  display: flex;
+  align-items: center;
 }
 
 .shop {
