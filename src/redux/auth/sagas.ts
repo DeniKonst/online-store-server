@@ -10,7 +10,6 @@ function* loginSagaWorker({
 }: ReturnType<typeof authActions.login>): any {
   try {
     const response = yield call(requests.login, payload);
-    console.log();
 
     localStorage.setItem(storageName, JSON.stringify(response.data));
     yield put(authActions.loginSuccess(response.data));
@@ -30,7 +29,6 @@ function* registrSagaWorker({
   
   try {
     const response = yield call(requests.registration, payload);
-    console.log();
 
     localStorage.setItem(storageName, JSON.stringify(response.data));
 

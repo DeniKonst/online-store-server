@@ -4,3 +4,5 @@ const uploadsController = require("../controllers/uploadsController");
 const upload = require("../middleware/upload");
 
 router.post("/", upload.single("image"), uploadsController.uploads);
+
+module.exports = router;

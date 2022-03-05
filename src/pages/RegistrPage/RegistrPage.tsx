@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 import { AuthForm } from "../../components/authForm/AuthForm";
 import { useHttp } from "../../hooks/http.hook";
 import { registr } from "../../redux/auth/actions";
-import { AuthPage } from "../authPage/authPage";
 import styles from "./styles.module.css";
 
 const RegistrPage = () => {

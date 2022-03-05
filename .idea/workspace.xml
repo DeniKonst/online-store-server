@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1432017-a4b4-4dc7-8373-24bc7218bd25" name="Default Changelist" comment="fixed login user">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/auth.hook.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/auth.hook.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/uploads.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/uploads.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/authForm/AuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/authForm/AuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/authPage/authPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/AuthPage/AuthPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/newsPage/newsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/NewsPage/NewsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/registrPage/registrPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrPage/RegistrPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/registrPage/styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/RegistrPage/styles.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/Auto/mockData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/Auto/mockData.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth/sagas.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth/sagas.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="246Zv9eGFFGJyNMzHcHpfFVtgWF" />
   <component name="ProjectViewState">
@@ -23,11 +37,18 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\ANDRUXA\Desktop\online-store-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ANDRUXA\Desktop\online-store-server\src\types" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -58,6 +79,9 @@
       <workItem from="1642953883510" duration="2048000" />
       <workItem from="1643539211522" duration="80000" />
       <workItem from="1643539293103" duration="3883000" />
+      <workItem from="1646504888304" duration="207000" />
+      <workItem from="1646508330758" duration="417000" />
+      <workItem from="1646508771508" duration="3148000" />
     </task>
     <task id="LOCAL-00001" summary="fixed login user">
       <created>1643542913174</created>
@@ -89,10 +113,21 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed login user" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed login user" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/routes/position.js</url>
+          <line>9</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

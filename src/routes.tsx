@@ -1,8 +1,8 @@
 import React from "react";
 import { Navigate, Routes } from "react-router-dom";
 import { Route } from "react-router-dom";
-import { AuthPage } from "./pages/authPage/authPage";
-import RegistrPage from "./pages/registrPage/registrPage";
+import { AuthPage } from "./pages/AuthPage/AuthPage";
+import RegistrPage from "./pages/RegistrPage/RegistrPage";
 import AutoPage from "./pages/AutoPage/AutoPage";
 import VeloPage from "./pages/VeloPage/VeloPage";
 import MotoPage from "./pages/MotoPage/MotoPage";

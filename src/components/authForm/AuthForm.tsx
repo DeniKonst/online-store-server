@@ -9,7 +9,6 @@ interface AuthFormProps {
 }
 
 export const AuthForm = ({ isRegistration, handleSubmit }: AuthFormProps) => {
-  const [inputLogin, setInputLogin] = useState('')
   return (
     <div className={styles.container}>
       <div className={styles.form}>
@@ -42,7 +41,7 @@ export const AuthForm = ({ isRegistration, handleSubmit }: AuthFormProps) => {
           {isRegistration && (
             <Form.Item
               label="Login"
-              name={inputLogin}
+              name="login"
               rules={[
                 {
                   required: true,

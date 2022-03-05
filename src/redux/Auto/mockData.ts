@@ -1,4 +1,6 @@
 import { IProduct } from "./types";
+import WheelBearingImg from "../../assets/images/wheelBearing.jpg";
+import LeverImg from "../../assets/images/lever.jpg";
 
 export const products: IProduct[] = [
   {
@@ -6,7 +8,7 @@ export const products: IProduct[] = [
     name: "Ступичный подшипник",
     cost: 50,
     weight: 4.5,
-    imageSrc: `${process.env.REACT_APP_DEVELOPMENT_API_URL}/api/uploads/wheelBearing.jpg`,
+    imageSrc: WheelBearingImg,
     description: "Производство Турция",
   },
   {
@@ -14,7 +16,7 @@ export const products: IProduct[] = [
     name: "рычаг передний верхний ",
     cost: 60,
     weight: 4.5,
-    imageSrc: `${process.env.REACT_APP_DEVELOPMENT_API_URL}/api/uploads/lever.jpg`,
+    imageSrc: LeverImg,
     description: "Производство Китай",
   },
   {
@@ -22,7 +24,7 @@ export const products: IProduct[] = [
     name: "рычаг передний нижний",
     cost: 40,
     weight: 4.5,
-    imageSrc: `${process.env.REACT_APP_DEVELOPMENT_API_URL}/api/uploads/wheelBearing.jpg`,
+    imageSrc: WheelBearingImg,
     description: "Производство Китай",
   },
   {
@@ -30,7 +32,7 @@ export const products: IProduct[] = [
     name: "датчик коленвала",
     cost: 80,
     weight: 4.5,
-    imageSrc: `${process.env.REACT_APP_DEVELOPMENT_API_URL}/api/uploads/lever.jpg`,
+    imageSrc: LeverImg,
     description: "Производство Германия",
   },
 
@@ -39,7 +41,7 @@ export const products: IProduct[] = [
     name: "рейка рулевая",
     cost: 150,
     weight: 4.5,
-    imageSrc: `${process.env.REACT_APP_DEVELOPMENT_API_URL}/api/uploads/wheelBearing.jpg`,
+    imageSrc: WheelBearingImg,
     description: "Производство Германия",
   },
   {
@@ -47,7 +49,7 @@ export const products: IProduct[] = [
     name: "рулевая тяга",
     cost: 30,
     weight: 4.5,
-    imageSrc: `${process.env.REACT_APP_DEVELOPMENT_API_URL}/api/uploads/lever.jpg`,
+    imageSrc: LeverImg,
     description: "Производство Китай",
   },
 ];
